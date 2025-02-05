@@ -13,7 +13,7 @@
     <body>
         <!-- html -->
         <div class="top-bar con_min_width">
-            <div class="con o flex height-100">
+            <div class="con flex height-100">
                 <div class="logo-wrap flex">
                     <a href="#" class="flex">
                         <img src="../kakao_img/logo_black.svg" alt="">
@@ -131,13 +131,18 @@
                 width: 1080px;
             }
 
-            /* 탑바 */
+            /* --- 탑바 --- */
             .top-bar {
                 height: 80px;
-                background-color: beige;
+                width: 100%;
+                background-color: #fff;
                 font-size: 15px;
+                position: fixed;
+                top:0; left: 0;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
 
+            /* --- 로고 --- */
             .top-bar .logo-wrap > a {
                 width: 116px;
             }
@@ -152,6 +157,28 @@
                 align-items: center;
             }
 
+            /* 텍스트 */
+            .top-bar .menu-box > ul> li >a {
+                padding: 0 24px;
+            }
+
+            .top-bar .menu-box > ul> li >a:hover {
+                text-decoration: underline;
+            }
+
+            .top-bar .menu-box > ul> li >a::after {
+                content: "";
+                background-color: #000;
+                width: 100%; height: 2px;
+                position: absolute; bottom: 0; left: 0;
+                display: none;
+            }
+
+            .top-bar .menu-box > ul> li:hover >a::after {
+                display: block;
+            }
+
+            /* --- 관련 사이트 --- */
             .top-bar .dropdown .drop-btn {
                 background: rgba(244, 244, 244, 0.8);
                 color: rgba(68, 68, 68, 1);
@@ -167,6 +194,8 @@
             .top-bar .dropdown .drop-btn i {
               display: inline-block; margin-left: 5px;
             }
+
+            /* --- 탑바 끝 --- */
         </style>
 
         <!-- js -->
