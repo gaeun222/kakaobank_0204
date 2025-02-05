@@ -26,15 +26,19 @@
                     <ul class="flex height-100">
                         <li>
                             <a href="#">은행소개</a>
+                            <ul></ul>
                         </li>
                         <li>
                             <a href="#">IR 투자정보</a>
+                            <ul></ul>
                         </li>
                         <li>
                             <a href="#">상품안내</a>
+                            <ul></ul>
                         </li>
                         <li>
                             <a href="#">고객센터</a>
+                            <ul></ul>
                         </li>
                     </ul>
                 </div>
@@ -138,7 +142,8 @@
                 background-color: #fff;
                 font-size: 15px;
                 position: fixed;
-                top:0; left: 0;
+                top: 0;
+                left: 0;
                 border-bottom: 1px solid rgba(0,0,0,0.1);
             }
 
@@ -157,24 +162,51 @@
                 align-items: center;
             }
 
-            /* 텍스트 */
-            .top-bar .menu-box > ul> li >a {
+            /* 1차메뉴 */
+            .top-bar .menu-box > ul > li > a {
                 padding: 0 24px;
+                position: relative;
             }
 
-            .top-bar .menu-box > ul> li >a:hover {
+            .top-bar .menu-box > ul > li > a:hover {
                 text-decoration: underline;
             }
 
-            .top-bar .menu-box > ul> li >a::after {
+            .top-bar .menu-box > ul > li > a::after {
                 content: "";
                 background-color: #000;
-                width: 100%; height: 2px;
-                position: absolute; bottom: 0; left: 0;
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
                 display: none;
             }
 
-            .top-bar .menu-box > ul> li:hover >a::after {
+            .top-bar .menu-box > ul > li:hover > a::after {
+                display: block;
+            }
+
+            /* 메뉴 박스 - 2차 메뉴 */
+            .top_bar .menu_box > ul > li > ul {
+                width: 100%;
+                height: 200px;
+                background-color: pink;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                display: none;
+            }
+            .top_bar .menu_box > ul > li:nth-child(2) > ul {
+                background-color: skyblue;
+            }
+            .top_bar .menu_box > ul > li:nth-child(3) > ul {
+                background-color: grey;
+            }
+            .top_bar .menu_box > ul > li:nth-child(4) > ul {
+                background-color: thistle;
+            }
+            .top_bar .menu_box > ul > li:hover > ul {
                 display: block;
             }
 
@@ -192,7 +224,8 @@
             }
 
             .top-bar .dropdown .drop-btn i {
-              display: inline-block; margin-left: 5px;
+                display: inline-block;
+                margin-left: 5px;
             }
 
             /* --- 탑바 끝 --- */
