@@ -11,8 +11,9 @@
 </head>
 <body>
   <!-- /////// html /////// -->
-   <div class="main_banner con_min_width border-red">
-    <div class="con img-box border-blue">
+   <div class="main_banner con_min_width">
+    <div class="bg"></div>
+    <div class="con img-box">
       <img src="../kakao_img/main-bg3.png" alt="">
     </div>
    </div>
@@ -21,8 +22,8 @@
 
 <!-- /////// css /////// -->
 <style>
-   /* 노말라이즈 */
-   body, ul, li {
+        /* 노말라이즈 */
+        body, ul, li {
             margin: 0;
             padding: 0;
             list-style: none;
@@ -99,9 +100,15 @@
 
         /* --- main banner --- */
         .main_banner {
-          background-color: #ffef6b;
+          position: relative;
         }
-
+        
+        .main_banner > .bg {
+          position: absolute; top:0; left: 0;
+          background-color: #ffef6b;
+          width: 100%; height: 648px;
+          z-index: -1;
+        }
 
 
 
