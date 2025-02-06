@@ -306,7 +306,7 @@
     </div>
 
 
-
+<!-- ////////// css /////////// -->
     <style>
         /* 노말라이즈 */
         body, ul, li {
@@ -411,7 +411,7 @@
             position: relative;
         }
 
-        .top_bar .menu_box > ul > li > a:hover {
+        .top_bar .menu_box > ul > li a:hover {
             text-decoration: underline;
         }
 
@@ -587,6 +587,7 @@
     </style>
     
 
+<!-- ////////// js /////////// -->
     <script>
         $('.dropBtn').click(function() {
             var dropdownContent = $('.dropdown_content');
@@ -600,7 +601,14 @@
                 dropdownContent.addClass('is-active')
                 ico.addClass('rotate');
             }
-        })
+        });
+
+        $(window).click(function(event){
+            if (!$(event.target).closest(".dropBtn").length) {
+                $(".dropdown_content").removeClass("is-active");
+                $("ico").removeClass('rotate');
+            }
+        });
     </script>
 </body>
 </html>
