@@ -31,10 +31,16 @@
                 </p>
                 <ul class="btns flex">
                     <li>
-                        <a href="">Google Play</a>
+                        <a href="#">
+                            <span class="ico ico-1"></span>
+                            <span>Google Play</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="">App Store</a>
+                        <a href="#">
+                            <span class="ico ico-2"></span>
+                            <span>App Store</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -121,6 +127,14 @@
                 width: 1080px;
             }
 
+            .ico {
+                background-color: white;
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                background-image: url("https://www.kakaobank.com/static/images/web/img_kabang_220615.png");
+            }
+
             /* --- main banner --- */
             .main_banner {
                 padding: 100px;
@@ -163,9 +177,25 @@
                 color: #333;
                 background: #fff;
                 text-align: center;
+                display: flex; justify-content: center;
+                align-items: center;
             }
 
+            .text_box > .btns > li:hover > a {
+                text-decoration: underline;
+            }
 
+            .text_box > .btns .ico {
+                margin-right: 10px;
+            }
+
+            .text_box > .btns .ico-1 {
+                background-position: -341px -292px;
+            }
+
+            .text_box > .btns .ico-2 {
+                background-position: -371px -292px;
+            }
         </style>
 
         <!-- /////// js /////// -->
